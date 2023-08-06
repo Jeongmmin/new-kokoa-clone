@@ -1,0 +1,257 @@
+#chat-screen {
+  background: rgb(236, 238, 174);
+  background: radial-gradient(
+    circle,
+    rgba(236, 238, 174, 1) 0%,
+    rgba(148, 180, 233, 1) 100%
+  );
+  height: 500vh;
+}
+
+#chat-screen .alt-header,
+#chat-screen .status-bar {
+  position: sticky;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #abc1d1;
+}
+
+#chat-screen .alt-header {
+  top: 26px;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.main-chat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-chat__timestamp {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+  margin-bottom: 35px;
+  opacity: 0;
+  animation: fadeIn 0.3s linear forwards;
+}
+
+.message-row img {
+  width: 220px;
+  height: 170px;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+.message__author {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.message__bubble {
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__info-plus {
+  margin-top: 10px;
+}
+
+.font-lg {
+  font-size: 40px;
+}
+
+.line-height {
+  line-height: 1.4;
+}
+
+.border {
+  border-top: var(--main-border);
+  padding-top: 30px;
+}
+
+.message__time,
+.message__author {
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.message-row--own {
+  justify-content: flex-end;
+}
+
+.message-row--own img {
+  width: 220px;
+  height: 170px;
+  border-radius: 8px;
+  margin-left: 8px;
+}
+
+.message-row--own .message__bubble {
+  background-color: var(--yellow);
+  border-radius: 15px;
+  border-top-right-radius: 0px;
+  margin-left: 8px;
+}
+
+.message-row--own .message__info {
+  justify-content: flex-end;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 5px 25px;
+}
+
+.reply i:not(.fa-arrow-up) {
+  opacity: 0.5;
+}
+
+.reply .reply__column:first-child {
+  width: 10%;
+}
+
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.reply input {
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 25px;
+  padding: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: 0;
+  top: 6px;
+}
+
+.reply__column:last-child > i {
+  right: 40px;
+  top: 18px;
+}
+
+.reply__column button {
+  background-color: var(--yellow);
+  border: none;
+  border-radius: 50%;
+  padding: 5px 8px;
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
+.reply .reply__column:first-child,
+.reply .fa-face-grin,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-face-grin,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  width: 94.5vw;
+  transform: translateX(-12.5%);
+}
+
+.message-row:nth-child(3) {
+  animation-delay: 2s;
+}
+.message-row:nth-child(4) {
+  animation-delay: 4s;
+}
+.message-row:nth-child(5) {
+  animation-delay: 6s;
+}
+.message-row:nth-child(6) {
+  animation-delay: 8s;
+}
+.message-row:nth-child(7) {
+  animation-delay: 10s;
+}
+.message-row:nth-child(8) {
+  animation-delay: 12s;
+}
+.message-row:nth-child(9) {
+  animation-delay: 14s;
+}
+.message-row:nth-child(10) {
+  animation-delay: 16s;
+}
+.message-row:nth-child(11) {
+  animation-delay: 18s;
+}
+.message-row:nth-child(12) {
+  animation-delay: 20s;
+}
+
+@media screen and (max-width: 420px) {
+  .message__bubble {
+    font-size: 14px;
+  }
+
+  .message-row .user-component__avatar-cover--sm {
+    width: 50px;
+    height: 50px;
+  }
+
+  .message-row img {
+    width: 180px;
+    height: 150px;
+  }
+
+  .message-row--own img {
+    width: 190px;
+    height: 150px;
+  }
+}
+
+.top-bottom-border {
+  padding: 20px 0;
+  border-top: var(--main-border);
+}

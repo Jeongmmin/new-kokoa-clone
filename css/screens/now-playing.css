@@ -1,0 +1,148 @@
+.main-music {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 130vh;
+  padding: 0 var(--horizontal-space);
+}
+
+.music-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.music-box img {
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+  box-shadow: 0px 20px 29px -6px #b783a7;
+}
+
+.music-box__song-title {
+  color: var(--text-black);
+  font-weight: 700;
+  font-size: 32px;
+  margin: 60px 0 20px;
+}
+
+.music-box__song-artist {
+  color: var(--text-gray);
+}
+
+.music-progress-box {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 40px;
+  border-radius: 20px;
+}
+
+.music-progress-box__time-line {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-gray);
+  font-size: 14px;
+}
+
+.music-progress-box__progress-bar {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+}
+
+@keyframes playnow {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 465px;
+  }
+}
+
+@keyframes playnowDot {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translate(465px);
+  }
+}
+.progress-bar__total-play-part {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 5px;
+  background-color: lightgray;
+  border-radius: 5px;
+}
+
+.progress-bar__played-part {
+  height: 5px;
+  background-color: #b783a7;
+  position: absolute;
+  z-index: 1;
+  border-radius: 5px;
+  /* animation: playnow 180s linear forwards; */
+}
+
+.played-animation {
+  animation: playnow 180s linear forwards;
+}
+
+.progress-bar__play-now-part {
+  width: 12px;
+  height: 12px;
+  background-color: #b783a7;
+  border-radius: 50%;
+  position: relative;
+  /* transform: translateX(100%); */
+  right: 5px;
+  z-index: 2;
+  /* animation: playnowDot 180s linear forwards; */
+}
+
+.play-now-animation {
+  animation: playnowDot 180s linear forwards;
+}
+
+.music-controller-box {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 30px;
+}
+
+.music-controller-box span {
+  box-shadow: var(--box-shadow);
+  border-radius: 50%;
+  transition: transform 200ms ease-in-out;
+}
+
+.music-controller-box span:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  color: #b783a7;
+}
+
+.controller__repeatBtn i,
+.controller__shuffleBtn i {
+  color: var(--text-gray);
+}
+
+.controller__backBtn i,
+.controller__nextBtn i {
+  font-size: 24px;
+}
+
+.controller__playBtn i {
+  font-size: 60px;
+}
+
+.nav {
+  z-index: 30;
+}

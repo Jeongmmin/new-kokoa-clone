@@ -1,0 +1,13 @@
+:root {
+  --yellow: #fae100;
+  --purple: #C9C3E9;
+  --deep-purple: #9488dc;
+  --pink: #ff84c3;;
+  --nav-color: #f9f9fa;
+  --horizontal-space: 25px;
+  --main-border: 1px solid rgba(0, 0, 0, 0.1);
+  --gray: rgba(0, 0, 0, 0.3);
+  --text-gray: #7a7979;
+  --text-black: #242424;
+  --box-shadow: 8px 11px 13px -6px #a5a5a5;
+}
